@@ -1,49 +1,61 @@
-import 'dart:html';
 import 'dart:io';
 
 void main() {
-  querySelector('#RipVanWinkle')!.text = 'zahra test';
-  dynamic NumOfItem;
-  dynamic quantity = 0;
+//int code;
+//int quantity;
+  dynamic price;
   dynamic total;
-  dynamic discount;
-  dynamic discPrice;
-  dynamic subTotal;
-  dynamic gst = 0.06;
-  dynamic total_gst;
+  dynamic amount;
+  dynamic discount = 0.2;
+  final gst;
 
-  final product;
-  stdout.write('Product Name: ');
-  product = stdin.readLineSync();
+  print("[1]. Apple");
+  print("[2]. Orange");
+  print("[3]. Pear");
+  print("[4]. Watermelon");
+  print("[5]. Dragonfruit");
 
-  stdout.write('Product Description: ');
-  final desc;
-  desc = stdin.readLineSync(); //get input
+  Map<int, String> fruits = {
+    1: 'apple',
+    2: 'orange',
+    3: 'pear',
+    4: 'watermelon',
+    5: 'dragonfruit',
+  };
 
-  stdout.write('Product Price: ');
-  double? price = double.parse(stdin.readLineSync()!);
+  stdout.write('Enter Product Code: ');
+  int code = int.parse(stdin.readLineSync()!);
 
-  stdout.write('Product Quantity: ');
-  int? quan = int.parse(stdin.readLineSync()!);
+  print('$code');
 
-  stdout.write('Discount: ');
-  double? disc = double.parse(stdin.readLineSync()!);
+  stdout.write('Enter Quantity: ');
+  int quantity = int.parse(stdin.readLineSync()!);
 
-  quantity += quan;
-  NumOfItem = quantity;
+  print('$quantity');
+
+  switch (code) {
+    case 1:
+      price = 12.00;
+      break;
+    case 2:
+      price = 10.00;
+      break;
+    case 3:
+      price = 9.00;
+      break;
+    case 4:
+      price = 8.00;
+      break;
+    case 5:
+      price = 6.3;
+      break;
+  }
   total = quantity * price;
-  discount = disc / 100 * total;
-  discPrice = discount;
-  subTotal = total - discPrice;
-  gst = gst * total;
-  total_gst = gst + subTotal;
-
-  print('\nProduct: $product (Description: $desc) | RM $price \n');
-  stdout.write('Product Quantity: $quantity \n');
-  stdout.write('Number Of Item: $NumOfItem --gjls\n'); //still Xtak tau
-  stdout.write('Product Total: RM $total \n');
-  print('Discount: $disc% = (-)RM $discPrice');
-  stdout.write('Pay: RM $subTotal\n');
-  stdout.write('GST 6%: RM$gst\n');
-  stdout.write('Total Payment with GST : RM$total_gst');
+  print('Total = $total');
+  discount = discount / 100 * total;
+  print('Discount = $discount');
+  gst = 0.06 * total;
+  print('GST 6% = $gst');
+  amount = gst + total;
+  print('Amount = $amount');
 }
