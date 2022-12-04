@@ -46,8 +46,8 @@ void main() {
     4: 'Briyani Kambing | RM 40.25',
     5: 'Tojin Lahm      | RM 12.25',
     6: 'Shakshuka       | RM 7.65',
-    7: 'Onion Rings     | RM 11.50',
-    8: 'Shadr Maqlyah   | RM 12.50',
+    7: 'Onion Rings     | RM 7.50',
+    8: 'Shadr Maqlyah   | RM 8.00',
     9: 'Mahhalaby       | RM 5.35',
   };
 
