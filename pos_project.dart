@@ -1,8 +1,7 @@
 import 'dart:io';
 
 void main() {
-//int code;
-//int quantity;
+
   dynamic price;
   dynamic total;
   dynamic subT;
@@ -38,6 +37,7 @@ void main() {
   stdout
       .write('Known as Milk Pudding Dessert from Middle Eastern pure milk\n\n');*/
 
+//Zahra Fathanah (2019050)
   Map<int, String> foods = {
     1: 'Bukhari Ayam    | RM 30.25',
     2: 'Bukhari Kambing | RM 40.25',
@@ -50,6 +50,7 @@ void main() {
     9: 'Mahhalaby       | RM 5.35',
   };
 
+//Zahra Fathanah (2019050)
   foods.forEach((code, food) => print('$code. ${food}'));
   stdout.write('Enter Product Code: ');
   int code = int.parse(stdin.readLineSync()!);
@@ -57,6 +58,7 @@ void main() {
   stdout.write('Enter Quantity: ');
   int quantity = int.parse(stdin.readLineSync()!);
 
+//Nur Khadijah Arizal (2015546)
   switch (code) {
     case 1:
       price = 30.25;
@@ -100,16 +102,17 @@ void main() {
   stdout.write('Add another order (Y/N): ');
   add = stdin.readLineSync();
 
+//Nur Khadijah Arizal (2015546)
   if (add == 'y' || add == 'Y') {
     main();
   } else {
     print('<<--------------------Recipt-------------------->>');
     NoI += quantity;
-
     print(foods[code]);
     print('Quantity: $quantity');
     print('Number Of Item = RM $NoI');
 
+//Zahra Fathanah (2019050)
     subT = price * quantity;
     print('SubTotal = RM $subT');
 
@@ -117,6 +120,8 @@ void main() {
     double? disc = double.parse(stdin.readLineSync()!);
 
     discount = disc / 100 * subT;
+
+//Nur Khadijah Arizal (2015546)
     gst = 0.06 * subT;
     print('GST 6% = $gst');
 
