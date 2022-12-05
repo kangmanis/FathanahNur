@@ -11,8 +11,7 @@ void main() {
   dynamic add;
   dynamic NoI = 0;
 
-  print(
-      "-----------------------------Math'am Al-Mufid-----------------------------");
+  print("||--------------Math'am Al-Mufid--------------||");
   /*print("[1]. Bukhari Ayam");
   stdout.write(
       'A menu of choices of unique Arabic flavors, made from basmati rice,\ncomplemented by special spices that are cool on the tongue + chicken\n\n');
@@ -104,22 +103,24 @@ void main() {
   if (add == 'y' || add == 'Y') {
     main();
   } else {
-    print(
-        '<<-----------------------------------Recipt----------------------------------->>');
+    print('<<--------------------Recipt-------------------->>');
     NoI += quantity;
-    print(
-        'No: $code  | RM $price | Quantity: $quantity | Number Of Item = RM $NoI');
-    stdout.write('Discount(%): ');
-    double? disc = double.parse(stdin.readLineSync()!);
+
+    print(foods[code]);
+    print('Quantity: $quantity');
+    print('Number Of Item = RM $NoI');
 
     subT = price * quantity;
     print('SubTotal = RM $subT');
+
+    stdout.write('Discount(%): ');
+    double? disc = double.parse(stdin.readLineSync()!);
 
     discount = disc / 100 * subT;
     gst = 0.06 * subT;
     print('GST 6% = $gst');
 
-    total = subT + gst;
+    total = subT - discount + gst;
     print('Total = RM $total');
 
     print('Thank You!');
