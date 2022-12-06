@@ -132,11 +132,7 @@ void add() {
     count();
   } else {
     print("\n\n\t\tSorry Invalid Decision Entered\n\n\n");
-    count();
+    main();
     print('Thank You!');
   }
 }
-
-/*Noi = bisa dihitung
-  SubTOtal =  tidak bisa dihitung
-  */
