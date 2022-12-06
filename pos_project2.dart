@@ -32,6 +32,7 @@ void menu() {
   foods.forEach((code, food) => print('$code. ${food}'));
 }
 
+//Nur Khadijah (2015546) and //Zahra Fathanah (2019050)
 void input() {
   stdout.write('Enter Product Code: ');
   code = int.parse(stdin.readLineSync()!);
@@ -102,6 +103,7 @@ void input() {
   }
 }
 
+//Zahra Fathanah (2019050)
 void subTotal() {
   print('<<--------------------Recipt-------------------->>');
   NoI += quantity;
@@ -111,6 +113,7 @@ void subTotal() {
   print('SubTotal = RM $subT');
 }
 
+//Nur Khadijah (2015546)
 void count() {
   stdout.write('Discount(%): ');
   double? disc = double.parse(stdin.readLineSync()!);
@@ -123,6 +126,7 @@ void count() {
   print('Total = RM $total');
 }
 
+//Nur Khadijah (2015546)
 void add() {
   stdout.write("\nWould you like to buy anything else?\n Y/N : ");
   choice = stdin.readLineSync();
@@ -136,3 +140,5 @@ void add() {
     print('Thank You!');
   }
 }
+
+//Note: Overall, we code together
