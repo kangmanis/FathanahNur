@@ -42,7 +42,7 @@ void menu() {
       break;
     case 2:
       //var sum1 = price * quantity;
-      price = 40.25;
+      price = 40.15;
       //print('Bukhari Kambing [RM $price] X $NoI');
       break;
     case 3:
@@ -50,7 +50,7 @@ void menu() {
       //print('Briyani Ayam [RM $price] X $NoI');
       break;
     case 4:
-      price = 40.25;
+      price = 40.15;
       //print('Briyani Kambing [RM $price] X $quantity');
       break;
     case 5:
