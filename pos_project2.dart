@@ -7,7 +7,7 @@ void main() {
 
 dynamic price;
 dynamic total;
-dynamic subT;
+dynamic subT = 0;
 dynamic discount;
 dynamic gst;
 dynamic NoI = 0;
@@ -40,7 +40,6 @@ void input() {
     stdout.write('Enter Quantity: ');
     quantity = int.parse(stdin.readLineSync()!);
     price = 30.25;
-    subT = 30.25 * quantity;
     print('Bukhari Ayam [RM $price] X $quantity');
     subTotal();
     add();
@@ -48,7 +47,6 @@ void input() {
     stdout.write('Enter Quantity: ');
     quantity = int.parse(stdin.readLineSync()!);
     price = 40.15;
-    subT = 40.15 * quantity;
     print('Bukhari Kambing [RM $price] X $quantity');
     subTotal();
     add();
@@ -56,7 +54,6 @@ void input() {
     stdout.write('Enter Quantity: ');
     quantity = int.parse(stdin.readLineSync()!);
     price = 30.25;
-    subT = 30.25 * quantity;
     print('Briyani Ayam [RM $price] X $quantity');
     subTotal();
     add();
@@ -64,7 +61,6 @@ void input() {
     stdout.write('Enter Quantity: ');
     quantity = int.parse(stdin.readLineSync()!);
     price = 40.15;
-    subT = 40.15 * quantity;
     print('Briyani Kambing [RM $price] X $quantity');
     subTotal();
     add();
@@ -72,7 +68,6 @@ void input() {
     stdout.write('Enter Quantity: ');
     quantity = int.parse(stdin.readLineSync()!);
     price = 12.25;
-    subT = 12.25 * quantity;
     print('Tojin Lahm [RM $price] X $quantity');
     subTotal();
     add();
@@ -80,7 +75,6 @@ void input() {
     stdout.write('Enter Quantity: ');
     quantity = int.parse(stdin.readLineSync()!);
     price = 7.65;
-    subT = 7.65 * quantity;
     print('Shakshuka [RM $price] X $quantity');
     subTotal();
     add();
@@ -88,7 +82,6 @@ void input() {
     stdout.write('Enter Quantity: ');
     quantity = int.parse(stdin.readLineSync()!);
     price = 7.50;
-    subT = 7.50 * quantity;
     print('Onion Rings [RM $price] X $quantity');
     subTotal();
     add();
@@ -96,7 +89,6 @@ void input() {
     stdout.write('Enter Quantity: ');
     quantity = int.parse(stdin.readLineSync()!);
     price = 8.00;
-    subT = 8.00 * quantity;
     print('Shadr Maqlyah [RM $price] X $quantity');
     subTotal();
     add();
@@ -104,7 +96,6 @@ void input() {
     stdout.write('Enter Quantity: ');
     quantity = int.parse(stdin.readLineSync()!);
     price = 5.35;
-    subT = 5.35 * quantity;
     print('Mahhalaby [RM $price] X $quantity');
     subTotal();
     add();
@@ -114,11 +105,9 @@ void input() {
 void subTotal() {
   print('<<--------------------Recipt-------------------->>');
   NoI += quantity;
-  //print(foods[code]);
   print('Quantity: $quantity');
   print('Number Of Item = $NoI');
-
-//Zahra Fathanah (2019050)
+  subT += price * quantity;
   print('SubTotal = RM $subT');
 }
 
@@ -147,3 +136,7 @@ void add() {
     print('Thank You!');
   }
 }
+
+/*Noi = bisa dihitung
+  SubTOtal =  tidak bisa dihitung
+  */
