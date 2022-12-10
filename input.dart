@@ -78,7 +78,7 @@ class Code {
   }
 
   void receipt() {
-    print('<<--------------------Math\'am Al Mufid-------------------->>');
+    print('<<\n--------------------Math\'am Al Mufid-------------------->>');
     print(
         'Kanagarian Guguak, Jl. Tan Malaka No.KM 12, Kec. Guguak, \n  Kab. Lima Puluh Kota,Sumatera Barat, Indonesia');
     print('\t\t+62 813 6539 0045\t\t');
