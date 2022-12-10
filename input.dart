@@ -9,6 +9,7 @@ dynamic NoI = 0;
 dynamic choice;
 dynamic code;
 dynamic quantity = 0;
+dynamic disct;
 dynamic nettTotal;
 dynamic nettGst;
 dynamic nettDisc;
@@ -62,19 +63,44 @@ class Code {
 
   void count() {
 //Zahra Fathanah (2019050)
-    print('<<--------------------Recipt-------------------->>');
     stdout.write('Discount(%) = ');
     double? disc = double.parse(stdin.readLineSync()!);
+    disct = disc;
     discount = (disc / 100 * subT);
     nettDisc = discount.toStringAsFixed(2);
 
 //Nur Khadijah (2015546)
     gst = (0.06 * subT);
     nettGst = gst.toStringAsFixed(2);
-    print('GST 6% = $nettGst');
-
     total = subT - discount + gst;
     nettTotal = total.toStringAsFixed(2);
-    print('Total = RM $nettTotal');
+    receipt();
   }
+
+  void receipt() {
+    print('<<--------------------Math\'am Al Mufid-------------------->>');
+    print(
+        'Kanagarian Guguak, Jl. Tan Malaka No.KM 12, Kec. Guguak, \n  Kab. Lima Puluh Kota,Sumatera Barat, Indonesia');
+    print('\t\t+62 813 6539 0045\t\t');
+    print(new DateTime.now()); //cem mana cara buat di center macam diatas
+    print('------------------------------------------');
+    print('     Item          |           Amount     ');
+    print('------------------------------------------');
+    print('PRODUCT NAME DISINI');
+    print(
+        '      $price         |           $quantity     '); //just take the last order
+    print('------------------------------------------');
+    print('Number Of Item = $NoI');
+    print('SubTotal =  $subT');
+    print('Discount($disct %) = $nettDisc');
+    print('GST 6% = $nettGst');
+    print('Total = RM $nettTotal');
+    print('------------------------------------------');
+    print('-----Thank You and See you next time!-----');
+  }
+
+  /*
+  atau kita buat var name di each of menu macam item, then, kita call di reeipt
+  but, sama je dia just call the last order
+  */
 }
