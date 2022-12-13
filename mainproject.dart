@@ -1,9 +1,9 @@
 import 'dart:io';
-import 'input.dart';
+import 'Zf.dart';
 
 void main() {
   Code a = new Code();
-  a.menu(); 
+  a.menu();
 
   stdout.write('Enter Product Code: ');
   code = int.parse(stdin.readLineSync()!);
@@ -11,56 +11,58 @@ void main() {
   //Zahra Fathanah (2019050)
   if (code == 1) {
     a.input();
+    //foods.values;
+    name = 'Bukhari Ayam';
     price = 30.25;
-    print('Bukhari Ayam [RM $price] X $quantity');
+    print('$name [RM $price] X $quantity');
     a.subTotal();
-    
   } else if (code == 2) {
     a.input();
+    name = 'Bukhari Kambing';
     price = 40.15;
-    print('Bukhari Kambing [RM $price] X $quantity');
+    print('$name [RM $price] X $quantity');
     a.subTotal();
-    
   } else if (code == 3) {
     a.input();
+    name = 'Briyani Ayam';
     price = 30.25;
-    print('Briyani Ayam [RM $price] X $quantity');
+    print('$name [RM $price] X $quantity');
     a.subTotal();
-    
   } else if (code == 4) {
     a.input();
+    name = 'Briyani Kambing';
     price = 40.15;
-    print('Briyani Kambing [RM $price] X $quantity');
+    print('$name [RM $price] X $quantity');
     a.subTotal();
-    
   } else if (code == 5) {
     a.input();
+    name = 'Tojin Lahm';
     price = 12.25;
-    print('Tojin Lahm [RM $price] X $quantity');
+    print('$name [RM $price] X $quantity');
     a.subTotal();
-    
   } else if (code == 6) {
     a.input();
+    name = 'Shakshuka';
     price = 7.65;
-    print('Shakshuka [RM $price] X $quantity');
+    print('$name [RM $price] X $quantity');
     a.subTotal();
-    
   } else if (code == 7) {
     a.input();
+    name = 'Onion Rings';
     price = 7.50;
-    print('Onion Rings [RM $price] X $quantity');
+    print('$name [RM $price] X $quantity');
     a.subTotal();
-
   } else if (code == 8) {
     a.input();
+    name = 'Shadr Maqlyah';
     price = 8.00;
-    print('Shadr Maqlyah [RM $price] X $quantity');
+    print('$name [RM $price] X $quantity');
     a.subTotal();
-
-  } else if (code == 9){
+  } else if (code == 9) {
     a.input();
+    name = 'Mahhalaby';
     price = 5.35;
-    print('Mahhalaby [RM $price] X $quantity');
+    print('$name [RM $price] X $quantity');
     a.subTotal();
   }
 
@@ -74,6 +76,5 @@ void main() {
   } else {
     print("\n\n\t\tSorry Invalid Decision Entered\n\n\n");
     main();
-    print('Thank You!');
   }
 }
