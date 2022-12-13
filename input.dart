@@ -1,5 +1,6 @@
 import 'dart:io';
 
+dynamic name;
 dynamic price;
 dynamic total;
 dynamic subT = 0;
@@ -32,7 +33,7 @@ class Code {
 //Zahra Fathanah (2019050)
   void menu() {
     print("||--------------Math'am Al-Mufid--------------||");
-    Map<int, String> foods = {
+    Map<int, dynamic> foods = {
       1: 'Bukhari Ayam    | RM 30.25',
       2: 'Bukhari Kambing | RM 40.15',
       3: 'Briyani Ayam    | RM 30.25',
@@ -82,25 +83,15 @@ class Code {
     print(
         'Kanagarian Guguak, Jl. Tan Malaka No.KM 12, Kec. Guguak, \n  Kab. Lima Puluh Kota,Sumatera Barat, Indonesia');
     print('\t\t+62 813 6539 0045\t\t');
-    print(new DateTime.now()); //cem mana cara buat di center macam diatas
-    print('------------------------------------------');
-    print('     Item          |           Amount     ');
-    print('------------------------------------------');
-    print('PRODUCT NAME DISINI');
-    print(
-        '      $price         |           $quantity     '); //just take the last order
-    print('------------------------------------------');
+    //print(foods[code]);
+    print('------------------------------------------------------------');
+    print('$name | RM $price x $quantity'); //just take the last order
+    print('------------------------------------------------------------');
     print('Number Of Item = $NoI');
     print('SubTotal =  $subT');
     print('Discount($disct %) = $nettDisc');
     print('GST 6% = $nettGst');
     print('Total = RM $nettTotal');
-    print('------------------------------------------');
-    print('-----Thank You and See you next time!-----');
+    print('--------------Thank You and See you next time!--------------');
   }
-
-  /*
-  atau kita buat var name di each of menu macam item, then, kita call di reeipt
-  but, sama je dia just call the last order
-  */
 }
